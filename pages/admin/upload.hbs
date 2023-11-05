@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#blogform{
+    display:flex;
+    flex-direction: column;
+}
+body {
+    background: linear-gradient(to bottom, #3498db, #2980b9); /* Gradient from light blue to dark blue */
+    color: #ffffff; /* Set text color to white for better contrast */
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+
+    <h1>upload page for admin</h1>
+
+    <form action="/admin/createBlog" method="post" id="blogform" enctype="multipart/form-data" >
+
+<label for="title">Title:</label>
+<input type="text" id="title" name="title" required>
+
+<label for="content">Content:</label>
+<textarea name="content" id="content" cols="30" rows="10" required></textarea>
+
+<label for="image">Image:</label>
+<input type="file" id="imageInput" name="image" multiple accept="image/*" required onchange="showImages()">
+
+<div id="imagepreview">
+
+
+
+
+
+
+</div>
+
+
+
+
+
+<button type="submit">Upload</button>
+
+    </form>
+
+    </div>
+
+    <script src="/adminscript.js"></script> 
+</body>
+</html>
