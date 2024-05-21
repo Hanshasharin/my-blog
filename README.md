@@ -1,3 +1,3 @@
 # my-blog
 start:nodemon app.js
-localhost 300
+localhost 3000
